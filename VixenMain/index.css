@@ -105,6 +105,29 @@ button {
     margin-top: 20px; /* Add space between text and button */
 }
 
+#back-to-top {
+    display: none; /* Hide the button initially */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Optional: Style the button */
+#back-to-top {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+#back-to-top.show {
+    display: block;
+}
+
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     .navbar-logo {
@@ -117,22 +140,7 @@ button {
         padding: 1rem; /* Adjust padding for mobile */
         font-size: 1rem; /* Adjust font size for mobile */
     }
-    .main-content {
-        padding: 1rem; /* Add padding for mobile */
-    }
-}
 
-@media (max-width: 480px) {
-    .navbar-logo {
-        height: 60px; /* Further adjust logo size for small screens */
-    }
-    .center-text {
-        font-size: 2rem; /* Further adjust font size for small screens */
-    }
-    .nav-item .nav-link {
-        padding: 0.5rem; /* Further adjust padding for small screens */
-        font-size: 0.9rem; /* Further adjust font size for small screens */
-    }
     .main-content {
         padding: 0.5rem; /* Further adjust padding for small screens */
     }

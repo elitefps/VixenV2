@@ -129,6 +129,57 @@ function initBackToTopButton() {
     });
 }
 
+// index.js
+
+
+// Example of adding more animations or interactivity
+document.addEventListener('DOMContentLoaded', () => {
+    // Example: Hover effect on elements with the class 'interactive'
+    document.querySelectorAll('.interactive').forEach(el => {
+        el.addEventListener('mouseover', () => {
+            el.classList.add('hovered');
+        });
+        el.addEventListener('mouseout', () => {
+            el.classList.remove('hovered');
+        });
+    });
+
+    // Scroll reveal example
+    window.addEventListener('scroll', () => {
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+            if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+                el.classList.add('visible');
+            }
+        });
+    });
+
+    // Toggle navbar on small screens
+    document.querySelector('.navbar-toggler').addEventListener('click', () => {
+        const navbarNav = document.querySelector('#navbarNav');
+        navbarNav.classList.toggle('show');
+    });
+
+    // Back to Top button functionality
+    const backToTopButton = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+
 /* 
 
  Scrapped feature I decided to not include in the final project because I wasn't planning on making this open sourced. 
