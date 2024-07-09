@@ -68,7 +68,7 @@ body {
 .nav-item .nav-link {
     padding: 1.5rem 1rem; 
     font-family: var(--secondary-font-family);
-    margin-top: -40px; /* Move the text up by 5 pixels */
+    margin-top: -40px; /*5 pixels */
 }
 
 html {

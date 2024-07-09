@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initBackToTopButton();
 });
 
-// Smooth Scroll for anchor links
+
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -19,7 +19,7 @@ function initSmoothScroll() {
                 behavior: 'smooth'
             });
 
-            // Collapse the navbar after clicking a link on small screens
+            
             const navbarNav = document.querySelector('#navbarNav');
             if (navbarNav.classList.contains('show')) {
                 navbarNav.classList.remove('show');
@@ -28,7 +28,7 @@ function initSmoothScroll() {
     });
 }
 
-// Hover effect on elements with the class 'interactive'
+
 function initHoverEffect() {
     document.querySelectorAll('.interactive').forEach(el => {
         el.addEventListener('mouseover', () => {
@@ -40,7 +40,7 @@ function initHoverEffect() {
     });
 }
 
-// Scroll reveal example
+
 function initScrollReveal() {
     window.addEventListener('scroll', () => {
         document.querySelectorAll('.reveal-on-scroll').forEach(el => {
@@ -131,10 +131,8 @@ function initBackToTopButton() {
 
 // index.js
 
-
-// Example of adding more animations or interactivity
 document.addEventListener('DOMContentLoaded', () => {
-    // Example: Hover effect on elements with the class 'interactive'
+
     document.querySelectorAll('.interactive').forEach(el => {
         el.addEventListener('mouseover', () => {
             el.classList.add('hovered');
@@ -144,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Scroll reveal example
+  
     window.addEventListener('scroll', () => {
         document.querySelectorAll('.reveal-on-scroll').forEach(el => {
             if (el.getBoundingClientRect().top < window.innerHeight - 100) {
@@ -159,7 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
         navbarNav.classList.toggle('show');
     });
 
-    // Back to Top button functionality
     const backToTopButton = document.getElementById('back-to-top');
 
     window.addEventListener('scroll', () => {
