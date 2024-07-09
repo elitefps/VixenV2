@@ -10,9 +10,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Example of adding more animations or interactivity
+// Initialize on DOM content loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Example: Hover effect on elements with the class 'interactive'
+    initHoverEffect();
+    initScrollReveal();
+    initNavbarToggle();
+});
+
+function initHoverEffect() {
     document.querySelectorAll('.interactive').forEach(el => {
         el.addEventListener('mouseover', () => {
             el.classList.add('hovered');
@@ -21,8 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
             el.classList.remove('hovered');
         });
     });
+}
 
-    // Scroll reveal example
+function initScrollReveal() {
     window.addEventListener('scroll', () => {
         document.querySelectorAll('.reveal-on-scroll').forEach(el => {
             if (el.getBoundingClientRect().top < window.innerHeight - 100) {
@@ -30,13 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+}
 
-    // Toggle navbar on small screens
+function initNavbarToggle() {
     document.querySelector('.navbar-toggler').addEventListener('click', () => {
         const navbarNav = document.querySelector('#navbarNav');
         navbarNav.classList.toggle('show');
     });
-});
+}
 
 /*
 Enable when ready for deployment.
@@ -51,5 +58,4 @@ document.addEventListener('keydown', event => {
         event.preventDefault();
     }
 });
-
 */
