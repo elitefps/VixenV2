@@ -129,8 +129,13 @@ function initBackToTopButton() {
     });
 }
 
-/*
-Enable when ready for deployment.
+/* 
+
+ Scrapped feature I decided to not include in the final project because I wasn't planning on making this open sourced. 
+ There's no point in adding something that blocks u from viewing inspect element when its open source.
+
+Enable if you'd like.
+
 document.addEventListener('contextmenu', event => event.preventDefault());
 document.addEventListener('keydown', event => {
     if (event.keyCode == 123 || // F12

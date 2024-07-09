@@ -20,6 +20,7 @@ body {
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+ */
 }
+
 .bg-image {
     position: fixed;
     top: 0;
@@ -41,7 +42,6 @@ body {
     font-family: var(--main-font-family); 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     text-align: center; 
-    position: absolute;
 }
 
 .navbar-logo {
@@ -101,35 +101,11 @@ html {
     position: relative;
 }
 
-
-/* index.css */
-
-.back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    display: none;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 1000;
-    transition: opacity 0.3s ease-in-out;
+button {
+    margin-top: 20px; /* Add space between text and button */
 }
 
-.back-to-top.show {
-    display: block;
-    opacity: 1;
-}
-
-.back-to-top:hover {
-    background-color: #218838;
-}
-
-
-/* Mobile Responsiveness */
+/* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     .navbar-logo {
         height: 80px; /* Adjust logo size for mobile */
