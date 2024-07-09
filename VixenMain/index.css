@@ -1,11 +1,47 @@
 /* index.css */
 
+/* Add your custom styles here */
 body {
     padding: 20px;
     font-family: 'Rowdies', sans-serif; /* Applying Rowdies font from Google Fonts */
 }
 
 .center-text {
-    text-align: center; 
-    margin-top: 20%; 
+    text-align: center; /* Center the text horizontally */
+    margin-top: 20%; /* Adjust the value as needed to center the text vertically */
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Prevent text selection and copy */
+body {
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+}
+
+
+/* index.css */
+
+/* Additional styles for scroll reveal */
+.reveal-on-scroll {
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+}
+
+.reveal-on-scroll.visible {
+    opacity: 1;
+}
+
+/* Hover effect */
+.interactive {
+    transition: transform 0.3s ease;
+}
+
+.interactive.hovered {
+    transform: scale(1.05);
 }
