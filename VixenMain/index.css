@@ -101,3 +101,36 @@ html {
     flex-direction: column;
     position: relative;
 }
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 80px; /* Adjust logo size for mobile */
+    }
+    .center-text {
+        font-size: 3rem; /* Adjust font size for mobile */
+    }
+    .nav-item .nav-link {
+        padding: 1rem; /* Adjust padding for mobile */
+        font-size: 1rem; /* Adjust font size for mobile */
+    }
+    .main-content {
+        padding: 1rem; /* Add padding for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-logo {
+        height: 60px; /* Further adjust logo size for small screens */
+    }
+    .center-text {
+        font-size: 2rem; /* Further adjust font size for small screens */
+    }
+    .nav-item .nav-link {
+        padding: 0.5rem; /* Further adjust padding for small screens */
+        font-size: 0.9rem; /* Further adjust font size for small screens */
+    }
+    .main-content {
+        padding: 0.5rem; /* Further adjust padding for small screens */
+    }
+}

@@ -1,3 +1,5 @@
+// index.js
+
 // Smooth Scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -28,6 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Toggle navbar on small screens
+    document.querySelector('.navbar-toggler').addEventListener('click', () => {
+        const navbarNav = document.querySelector('#navbarNav');
+        navbarNav.classList.toggle('show');
+    });
 });
 
 /*
@@ -38,9 +46,10 @@ document.addEventListener('keydown', event => {
         (event.ctrlKey && event.shiftKey && event.keyCode == 73) || // Ctrl+Shift+I
         (event.ctrlKey && event.shiftKey && event.keyCode == 74) || // Ctrl+Shift+J
         (event.ctrlKey && event.keyCode == 85) || // Ctrl+U
-        (event.ctrlKey && event.keyCode == 83) // Ctrl+S
+        (event.ctrlKey and event.keyCode == 83) // Ctrl+S
     ) {
         event.preventDefault();
     }
-});  
+});
+
 */
