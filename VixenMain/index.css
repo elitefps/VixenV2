@@ -2,8 +2,25 @@
 
 /* Add your custom styles here */
 body {
-    padding: 20px;
+    padding: 0;
+    margin: 0;
     font-family: 'Rowdies', sans-serif; /* Applying Rowdies font from Google Fonts */
+    color: white; /* Ensure text is readable */
+}
+
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the background image is behind other content */
+    background: url('VixenMain/assets/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.transparent-navbar {
+    background-color: transparent !important; /* Make the navbar transparent */
 }
 
 .center-text {
@@ -24,9 +41,6 @@ body {
     -ms-user-select: none; /* IE10+ */
 }
 
-
-/* index.css */
-
 /* Additional styles for scroll reveal */
 .reveal-on-scroll {
     opacity: 0;
@@ -44,4 +58,8 @@ body {
 
 .interactive.hovered {
     transform: scale(1.05);
+}
+
+.main-content {
+    padding-top: 100px; /* To ensure content is not hidden under navbar */
 }

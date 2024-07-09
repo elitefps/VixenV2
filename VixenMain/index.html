@@ -19,7 +19,37 @@
 </head>
 
 <body>
-    <div class="container">
+    <!-- Background Image -->
+    <div class="bg-image"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top transparent-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Vixen</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container main-content">
         <h1 data-aos="fade-up" class="center-text">VIXEN</h1>
         <!-- Add more content here and apply AOS attributes to elements -->
     </div>
@@ -34,7 +64,6 @@
         // Initialize AOS
         AOS.init();
     </script>
-
 </body>
 
 </html>
