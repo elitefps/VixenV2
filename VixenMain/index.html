@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vixen V2 - Your ultimate solution for web design and development.">
     <link rel="shortcut icon" type="image/png" href="assets/logo.webp" />
     <title>Vixen V2</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <!-- AOS CSS -->
@@ -23,25 +24,27 @@
     <div class="bg-image"></div>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top transparent-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top transparent-navbar" data-aos="fade-up" data-aos-offset="30" data-aos-duration="700">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Vixen</a>
+            <a class="navbar-brand" href="#">
+                <img src="assets/logo-removebg-preview.png" alt="Vixen Logo" class="navbar-logo">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link" href="#home" aria-label="Home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#about" aria-label="About">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
+                        <a class="nav-link" href="#services" aria-label="Services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="#contact" aria-label="Contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -49,9 +52,9 @@
     </nav>
 
     <!-- Main Content -->
-    <div class="container main-content">
+    <div class="main-content">
         <h1 data-aos="fade-up" class="center-text">VIXEN</h1>
-        <!-- Add more content here and apply AOS attributes to elements -->
+        <!-- Content -->
     </div>
 
     <!-- Bootstrap JS bundle (required) -->
@@ -62,7 +65,10 @@
     <script src="index.js"></script>
     <script>
         // Initialize AOS
-        AOS.init();
+        AOS.init({
+            offset: 50, // offset (in px) from the original trigger point
+            duration: 600 // values from 0 to 3000, with step 50ms
+        });
     </script>
 </body>
 

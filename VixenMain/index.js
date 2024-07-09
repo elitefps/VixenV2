@@ -1,5 +1,3 @@
-// index.js
-
 // Smooth Scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -32,11 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
 /*
-
 Enable when ready for deployment.
-
 document.addEventListener('contextmenu', event => event.preventDefault());
 document.addEventListener('keydown', event => {
     if (event.keyCode == 123 || // F12
@@ -47,4 +42,5 @@ document.addEventListener('keydown', event => {
     ) {
         event.preventDefault();
     }
-});  */
+});  
+*/
