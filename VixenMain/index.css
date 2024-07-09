@@ -1,0 +1,11 @@
+/* index.css */
+
+body {
+    padding: 20px;
+    font-family: 'Rowdies', sans-serif; /* Applying Rowdies font from Google Fonts */
+}
+
+.center-text {
+    text-align: center; 
+    margin-top: 20%; 
+}
