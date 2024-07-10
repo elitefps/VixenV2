@@ -1,5 +1,3 @@
-// index.js
-
 document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initHoverEffect();
@@ -97,7 +95,6 @@ function initLazyLoad() {
         observer.observe(image);
     });
 }
-
 
 
 
