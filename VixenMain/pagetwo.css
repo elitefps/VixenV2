@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Montserrat:wght@300&display=swap');
+
+:root {
+    --main-font-family: 'Rowdies', sans-serif;
+    --secondary-font-family: 'Montserrat', sans-serif;
+    --main-color: white;
+    --bg-image-url: url('assets/bg.jpg');
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--main-font-family);
+    color: var(--main-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: var(--bg-image-url) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.transparent-navbar {
+    background-color: transparent !important;
+}
+
+.navbar-logo {
+    height: 120px;
+    width: auto;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-nav {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.nav-item .nav-link {
+    padding: 1.5rem 1rem;
+    font-family: var(--secondary-font-family);
+    margin-top: -40px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.main-content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 80px;
+    }
+    .nav-item .nav-link {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    .main-content {
+        padding: 0.5rem;
+    }
+}

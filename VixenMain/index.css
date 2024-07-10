@@ -1,3 +1,5 @@
+/* index.css */
+
 :root {
     --main-font-family: 'Rowdies', sans-serif;
     --secondary-font-family: 'Montserrat', sans-serif;
@@ -70,23 +72,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.reveal-on-scroll {
-    opacity: 0;
-    transition: opacity 0.6s ease-out;
-}
-
-.reveal-on-scroll.visible {
-    opacity: 1;
-}
-
-.interactive {
-    transition: transform 0.3s ease;
-}
-
-.interactive.hovered {
-    transform: scale(1.05);
-}
-
 .main-content {
     height: 100vh;
     display: flex;
@@ -100,6 +85,17 @@ button {
     margin-top: 20px;
 }
 
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: transparent !important;
+    color: var(--main-color);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* for Mobile Responsiveness */
 @media (max-width: 768px) {
     .navbar-logo {
         height: 80px;
@@ -113,5 +109,8 @@ button {
     }
     .main-content {
         padding: 0.5rem;
+    }
+    footer {
+        font-size: 0.8rem;
     }
 }
