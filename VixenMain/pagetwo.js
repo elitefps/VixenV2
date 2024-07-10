@@ -25,3 +25,21 @@ function initNavbarToggle() {
         navbarNav.classList.toggle('show');
     });
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    class App extends React.Component {
+      render() {
+        return (
+          <div>
+            <h1>Welcome to Page Two</h1>
+            <p>This is a simple React component integrated into pagetwo.html.</p>
+          </div>
+        );
+      }
+    }
+  
+    // Render the React component into the DOM element with id 'root'
+    ReactDOM.render(<App />, document.getElementById('root'));
+  });
+  
