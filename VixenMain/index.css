@@ -1,11 +1,11 @@
 /* index.css */
-
 :root {
     --main-font-family: 'Rowdies', sans-serif;
     --secondary-font-family: 'Montserrat', sans-serif;
     --main-color: white;
     --bg-image-url: url('assets/bg.jpg');
 }
+
 
 body {
     padding: 0;
@@ -16,10 +16,8 @@ body {
     display: flex;
     flex-direction: column; 
     user-select: none;
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+ */
 }
+
 
 .bg-image {
     position: fixed;
@@ -32,6 +30,7 @@ body {
     background-size: cover;
 }
 
+/* Navbar styles */
 .transparent-navbar {
     background-color: transparent !important; 
 }
@@ -68,9 +67,10 @@ body {
 .nav-item .nav-link {
     padding: 1.5rem 1rem; 
     font-family: var(--secondary-font-family);
-    margin-top: -40px; /*5 pixels */
+    margin-top: -40px; 
 }
 
+/* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
@@ -92,6 +92,7 @@ html {
     transform: scale(1.05);
 }
 
+/* Main content styles */
 .main-content {
     height: 100vh;
     display: flex;
@@ -102,46 +103,23 @@ html {
 }
 
 button {
-    margin-top: 20px; /* Add space between text and button */
+    margin-top: 15px; 
 }
 
-#back-to-top {
-    display: none; /* Hide the button initially */
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-}
-
-/* Optional: Style the button */
-#back-to-top {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-}
-
-#back-to-top.show {
-    display: block;
-}
-
-/* Media Queries for Mobile Responsiveness */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
     .navbar-logo {
-        height: 80px; /* Adjust logo size for mobile */
+        height: 80px;
     }
     .center-text {
-        font-size: 3rem; /* Adjust font size for mobile */
+        font-size: 3rem;
     }
     .nav-item .nav-link {
-        padding: 1rem; /* Adjust padding for mobile */
-        font-size: 1rem; /* Adjust font size for mobile */
+        padding: 1rem;
+        font-size: 1rem;
     }
 
     .main-content {
-        padding: 0.5rem; /* Further adjust padding for small screens */
+        padding: 0.5rem;
     }
 }

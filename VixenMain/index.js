@@ -7,9 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavbarToggle();
     initActiveLinkHighlight();
     initLazyLoad();
-    initBackToTopButton();
 });
-
 
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -19,7 +17,6 @@ function initSmoothScroll() {
                 behavior: 'smooth'
             });
 
-            
             const navbarNav = document.querySelector('#navbarNav');
             if (navbarNav.classList.contains('show')) {
                 navbarNav.classList.remove('show');
@@ -27,7 +24,6 @@ function initSmoothScroll() {
         });
     });
 }
-
 
 function initHoverEffect() {
     document.querySelectorAll('.interactive').forEach(el => {
@@ -40,7 +36,6 @@ function initHoverEffect() {
     });
 }
 
-
 function initScrollReveal() {
     window.addEventListener('scroll', () => {
         document.querySelectorAll('.reveal-on-scroll').forEach(el => {
@@ -51,7 +46,6 @@ function initScrollReveal() {
     });
 }
 
-// Toggle navbar on small screens
 function initNavbarToggle() {
     document.querySelector('.navbar-toggler').addEventListener('click', () => {
         const navbarNav = document.querySelector('#navbarNav');
@@ -59,7 +53,6 @@ function initNavbarToggle() {
     });
 }
 
-// Highlight the active link in the navbar
 function initActiveLinkHighlight() {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -83,7 +76,6 @@ function initActiveLinkHighlight() {
     });
 }
 
-// Lazy load images
 function initLazyLoad() {
     const images = document.querySelectorAll('img[data-src]');
 
@@ -106,74 +98,6 @@ function initLazyLoad() {
     });
 }
 
-// Back to top button
-function initBackToTopButton() {
-    const backToTopButton = document.createElement('button');
-    backToTopButton.innerHTML = '↑';
-    backToTopButton.classList.add('back-to-top');
-    document.body.appendChild(backToTopButton);
-
-    backToTopButton.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            backToTopButton.classList.add('show');
-        } else {
-            backToTopButton.classList.remove('show');
-        }
-    });
-}
-
-// index.js
-
-document.addEventListener('DOMContentLoaded', () => {
-
-    document.querySelectorAll('.interactive').forEach(el => {
-        el.addEventListener('mouseover', () => {
-            el.classList.add('hovered');
-        });
-        el.addEventListener('mouseout', () => {
-            el.classList.remove('hovered');
-        });
-    });
-
-  
-    window.addEventListener('scroll', () => {
-        document.querySelectorAll('.reveal-on-scroll').forEach(el => {
-            if (el.getBoundingClientRect().top < window.innerHeight - 100) {
-                el.classList.add('visible');
-            }
-        });
-    });
-
-    // Toggle navbar on small screens
-    document.querySelector('.navbar-toggler').addEventListener('click', () => {
-        const navbarNav = document.querySelector('#navbarNav');
-        navbarNav.classList.toggle('show');
-    });
-
-    const backToTopButton = document.getElementById('back-to-top');
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            backToTopButton.classList.add('show');
-        } else {
-            backToTopButton.classList.remove('show');
-        }
-    });
-
-    backToTopButton.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-});
 
 
 
